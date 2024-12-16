@@ -23,6 +23,9 @@ function makePageForEpisodes(episodeList) {
   // Append card to root element
   cards.forEach((card) => rootElem.appendChild(card));
 
+  let searchLabelDisplay = document.querySelector("#search-label-display");
+  searchLabelDisplay.innerHTML = `Displaying ${filteredEpisodes.length}/${state.allEpisodes.length} episodes`
+
   
 }
 
