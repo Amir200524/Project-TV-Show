@@ -1,8 +1,12 @@
 // You can edit ALL of the code here
-
+const allEpisodes = getAllEpisodes(); // Fetch all episodes
+let state = {
+  allEpisodes,
+  searchTerm: "",
+}
 function setup() {
-  const allEpisodes = getAllEpisodes(); // Fetch all episodes
-  makePageForEpisodes(allEpisodes); // Render episodes
+  
+  makePageForEpisodes(state.allEpisodes); // Render episodes
 }
 
 function makePageForEpisodes(episodeList) {
@@ -11,13 +15,18 @@ function makePageForEpisodes(episodeList) {
   // Clear the root element
   rootElem.innerHTML = "";
 
-  // Display the number of episodes
-  const episodeCount = document.createElement("p");
-  episodeCount.textContent = `Got ${episodeList.length} episode(s)`;
-  rootElem.appendChild(episodeCount);
+  let filteredEpisodes = state.allEpisodes.filter(function(episode){
+    return(episode.name.toLowerCase().includes(state.searchTerm.toLowerCase()))
+  })
 
-  // Create cards for each episode
-  episodeList.forEach((episode) => {
+  let cards = filteredEpisodes.map ((item)=> createFilmCard(item))
+  // Append card to root element
+  cards.forEach((card) => rootElem.appendChild(card));
+
+  
+}
+
+function createFilmCard(episode){
     // Create card container
     const card = document.createElement("div");
     card.className = "card";
@@ -32,11 +41,16 @@ function makePageForEpisodes(episodeList) {
         <a href="${episode.url}" target="_blank" class="link">View on TVMaze</a>
       </div>
     `;
-
-    // Append card to root element
-    rootElem.appendChild(card);
-  });
+    return card;
 }
+
+let searchEpisode = document.querySelector("#search-episode");
+searchEpisode.addEventListener("keyup", ()=> {
+  state.searchTerm = searchEpisode.value;
+  let bodyCards = document.querySelector("#root");
+  bodyCards.innerHTML ="";
+  makePageForEpisodes()
+} )
 
 // Helper function to format episode code
 function formatEpisodeCode(season, number) {
