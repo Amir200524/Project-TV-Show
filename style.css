@@ -57,3 +57,13 @@ body {
   color: #007bff;
   font-size: 14px;
 }
+
+#search-episode{
+  margin-left: 9%;
+  padding: 9px;
+  border-radius: 10px;
+}
+.srch{
+  margin-top: 3%;
+  font-weight: 700;
+}
