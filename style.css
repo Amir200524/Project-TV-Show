@@ -1,13 +1,55 @@
-#root {
-  color: red;
-}
+/* General styling */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: rgb(17, 17, 17);
+  background-color: #1e1e1e;
+  color: #ffffff;
+  line-height: 1.6;
 }
 
+header {
+  background-color: #333333;
+  color: #ffffff;
+  padding: 15px;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.controls input,
+.controls select {
+  padding: 10px;
+  margin: 10px 0;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  width: 300px;
+}
+
+.controls input:focus,
+.controls select:focus {
+  outline: none;
+  box-shadow: 0 0 5px #007bff;
+}
+
+.controls #results-count {
+  margin: 10px 0;
+  font-size: 0.9rem;
+  color: #cccccc;
+}
+
+/* Episode cards */
 #root {
   display: flex;
   flex-wrap: wrap;
@@ -16,13 +58,14 @@ body {
 }
 
 .card {
-  background: #fff;
-  border: 20px solid #04030300;
+  background: #ffffff;
+  border: 1px solid #ccc;
   border-radius: 8px;
   width: 300px;
   margin: 10px;
   overflow: hidden;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  color: #000000;
 }
 
 .card img {
@@ -42,18 +85,22 @@ body {
 
 .card-text {
   font-size: 14px;
-  color: #666;
+  color: #555555;
   margin-bottom: 10px;
 }
 
 .episode-code {
   font-weight: bold;
   font-size: 14px;
-  color: #333;
+  color: #007bff;
 }
 
 .link {
   text-decoration: none;
   color: #007bff;
   font-size: 14px;
+}
+
+.link:hover {
+  text-decoration: underline;
 }
