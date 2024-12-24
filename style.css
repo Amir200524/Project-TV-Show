@@ -49,7 +49,7 @@ header h1 {
   color: #cccccc;
 }
 
-/* Episode cards */
+/* Cards */
 #root {
   display: flex;
   flex-wrap: wrap;

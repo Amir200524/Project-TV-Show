@@ -4,29 +4,31 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>TV Show Project | Filter & Search Episodes</title>
+  <title>TV Show Project</title>
   <link href="style.css" rel="stylesheet" />
   <link rel="icon" href="/favicon.ico" type="image/x-icon" />
 </head>
 
 <body>
   <header>
-    <h1>TV Show Episodes</h1>
+    <h1>TV Show Project</h1>
+    <nav>
+      <button id="back-to-shows" style="display: none;">Back to Shows</button>
+    </nav>
     <div class="controls">
-      <input type="text" id="search-box" placeholder="Search episodes..." aria-label="Search episodes" />
-      <select id="episode-selector">
-        <option value="" selected>Jump to episode...</option>
+      <input type="text" id="search-box" placeholder="Search shows or episodes..." aria-label="Search" />
+      <select id="show-selector">
+        <option value="" selected>Jump to a show...</option>
       </select>
-      <p id="results-count">Showing all episodes</p>
+      <select id="episode-selector" style="display: none;">
+        <option value="" selected>Jump to an episode...</option>
+      </select>
+      <p id="results-count">Loading data...</p>
     </div>
   </header>
 
   <main id="root"></main>
 
-  <!-- Loads a provided function called getAllEpisodes() which returns all episodes -->
-  <script src="episodes.js"></script>
-
-  <!-- Loads YOUR JavaScript code -->
   <script src="script.js"></script>
 </body>
 
