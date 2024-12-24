@@ -1,106 +1,162 @@
-/* General styling */
+/* General Body Styling */
 body {
+  background-color: #151b29;
+  margin: 0;
   font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #1e1e1e;
-  color: #ffffff;
-  line-height: 1.6;
 }
 
-header {
-  background-color: #333333;
-  color: #ffffff;
-  padding: 15px;
+/* Page Title */
+h1 {
   text-align: center;
+  color: #63a6a9;
+  margin: 20px 0;
 }
 
-header h1 {
-  margin: 0;
-  font-size: 2rem;
-}
-
-.controls {
+/* Search Bar Styling */
+#search-bar {
+  width: 90%;
+  margin: 20px auto;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 15px;
 }
 
-.controls input,
-.controls select {
+#search-input {
+  width: 40%;
   padding: 10px;
-  margin: 10px 0;
-  font-size: 1rem;
-  border: none;
-  border-radius: 5px;
-  width: 300px;
-}
-
-.controls input:focus,
-.controls select:focus {
+  font-size: 16px;
+  border-radius: 15px;
+  border: 1px solid #ccc;
+  background-color: aquamarine;
   outline: none;
-  box-shadow: 0 0 5px #007bff;
 }
 
-.controls #results-count {
-  margin: 10px 0;
-  font-size: 0.9rem;
-  color: #cccccc;
+#search-result {
+  margin-top: 10px;
+  color: #63a6a9;
+  text-align: center;
 }
 
-/* Cards */
+/* Dropdown Styling */
+#show-bar,
+#jump-bar {
+  width: 90%;
+  margin: 20px auto;
+  display: flex;
+  justify-content: center;
+}
+
+#show-select,
+#episode-select {
+  width: 30%;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 15px;
+  border: 1px solid #ccc;
+  background-color: aquamarine;
+  color: #151b29;
+  outline: none;
+  cursor: pointer;
+}
+
+/* Episode List Styling */
 #root {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  padding: 20px;
 }
 
-.card {
-  background: #ffffff;
-  border: 1px solid #ccc;
+#ul-list {
+  width: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.li-list-cls {
+  width: calc(33.333% - 20px);
+  background-color: #252f46;
+  color: rgb(127, 137, 146);
+  border: 2px solid #3b3f54;
   border-radius: 8px;
-  width: 300px;
-  margin: 10px;
   overflow: hidden;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-  color: #000000;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.2s ease;
 }
 
-.card img {
-  width: 100%;
-  height: auto;
+.li-list-cls:hover {
+  box-shadow: 0 0.5em 1em -0.4em #f1ff5c;
+  transform: translateY(-5px);
 }
 
-.card-body {
-  padding: 15px;
+.h2-title-cls {
+  padding: 10px;
+  text-align: center;
+  color: #d3d3d3;
+  margin: 0;
+  background-color: #2f3a54;
 }
 
-.card-title {
-  font-size: 18px;
-  font-weight: bold;
-  margin-bottom: 10px;
+.img-picture-cls {
+  width: 70%;
+  display: block;
+  margin: 20px auto;
+  border-radius: 8px;
+  border: 2px solid #3b3f54;
 }
 
-.card-text {
+.p-summary-cls {
+  margin: 20px;
+  color: lightgray;
   font-size: 14px;
-  color: #555555;
-  margin-bottom: 10px;
+  line-height: 1.6;
 }
 
-.episode-code {
-  font-weight: bold;
+.p-episode-link {
+  margin: 20px;
   font-size: 14px;
-  color: #007bff;
+  text-align: center;
 }
 
-.link {
+.episode-link {
   text-decoration: none;
-  color: #007bff;
-  font-size: 14px;
+  color: #0e56f1;
+  font-weight: bold;
 }
 
-.link:hover {
+.episode-link:hover {
   text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 820px) {
+
+  #search-input,
+  #show-select,
+  #episode-select {
+    width: 60%;
+  }
+
+  .li-list-cls {
+    width: 45%;
+  }
+}
+
+@media (max-width: 450px) {
+
+  #search-input,
+  #show-select,
+  #episode-select {
+    width: 80%;
+  }
+
+  .li-list-cls {
+    width: 100%;
+    margin: 0 auto;
+  }
 }
