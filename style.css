@@ -1,6 +1,6 @@
 /* General Body Styling */
 body {
-  background-color: #151b29;
+  background-color:#090909;
   margin: 0;
   font-family: Arial, sans-serif;
 }
@@ -8,7 +8,7 @@ body {
 /* Page Title */
 h1 {
   text-align: center;
-  color: #63a6a9;
+  color: #eef4f4;
   margin: 20px 0;
 }
 
@@ -22,12 +22,12 @@ h1 {
 }
 
 #search-input {
-  width: 40%;
+  width: 25%;
   padding: 10px;
   font-size: 16px;
   border-radius: 15px;
   border: 1px solid #ccc;
-  background-color: aquamarine;
+  background-color: rgb(247, 250, 249);
   outline: none;
 }
 
@@ -48,12 +48,12 @@ h1 {
 
 #show-select,
 #episode-select {
-  width: 30%;
+  width: 35%;
   padding: 10px;
   font-size: 16px;
   border-radius: 15px;
   border: 1px solid #ccc;
-  background-color: aquamarine;
+  background-color: rgb(248, 251, 250);
   color: #151b29;
   outline: none;
   cursor: pointer;
@@ -78,10 +78,10 @@ h1 {
 
 .li-list-cls {
   width: calc(33.333% - 20px);
-  background-color: #252f46;
-  color: rgb(127, 137, 146);
+  background-color: #b4b6bb;
+  color: rgb(19, 19, 19);
   border: 2px solid #3b3f54;
-  border-radius: 8px;
+  border-radius: 18px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -112,7 +112,7 @@ h1 {
 
 .p-summary-cls {
   margin: 20px;
-  color: lightgray;
+  color: rgb(18, 17, 17);
   font-size: 14px;
   line-height: 1.6;
 }
@@ -125,7 +125,7 @@ h1 {
 
 .episode-link {
   text-decoration: none;
-  color: #0e56f1;
+  color: #2c2c2c;
   font-weight: bold;
 }
 
