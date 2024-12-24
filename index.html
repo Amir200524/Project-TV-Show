@@ -2,31 +2,41 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>TV Show Project | Filter & Search Episodes</title>
-  <link href="style.css" rel="stylesheet" />
-  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TV Show Project | Jump to Episode</title>
+  <link href="style.css" rel="stylesheet">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
 </head>
 
 <body>
-  <header>
-    <h1>TV Show Episodes</h1>
-    <div class="controls">
-      <input type="text" id="search-box" placeholder="Search episodes..." aria-label="Search episodes" />
-      <select id="episode-selector">
-        <option value="" selected>Jump to episode...</option>
-      </select>
-      <p id="results-count">Showing all episodes</p>
-    </div>
-  </header>
+  <h1>TV Show Episodes</h1>
 
-  <main id="root"></main>
+  <!-- Search Bar -->
+  <div id="search-bar">
+    <input type="text" id="search-input" placeholder="Search episodes...">
+  </div>
 
-  <!-- Loads a provided function called getAllEpisodes() which returns all episodes -->
-  <script src="episodes.js"></script>
+  <!-- Show Selector Dropdown -->
+  <div id="show-bar">
+    <select id="show-select">
+      <option value="">Loading shows...</option>
+    </select>
+  </div>
 
-  <!-- Loads YOUR JavaScript code -->
+  <!-- Episode Jump Dropdown -->
+  <div id="jump-bar">
+    <select id="episode-select">
+      <option value="">Select an episode...</option>
+    </select>
+  </div>
+  <p id="search-result">Displaying all episodes</p>
+
+  <!-- Root Element for Episodes -->
+  <div id="root">
+    <ul id="ul-list"></ul>
+  </div>
+
   <script src="script.js"></script>
 </body>
 
